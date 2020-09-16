@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-light">
+    <a href="https://github.com/B45i/frola-bug">Source: https://github.com/B45i/frola-bug</a>
+</nav>
+
+<div class="container mt-2">
+    <div class="row mb-2">
+        <div class="col-1">To:</div>
+        <div class="col">
+            <ng-select #bcc class="form-control"> </ng-select>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-1">Subject</div>
+        <div class="col">
+            <ng-select #bcc class="form-control"><input class="form-control" type="text"
+                    [(ngModel)]="emailConfiguration.SubjectValue" /></ng-select>
+        </div>
+    </div>
+
+
+    <div #froalaEditorForEmail="froalaEditor" [froalaEditor]='FroalaOptions'
+        [(froalaModel)]="emailConfiguration.BodyValue">
+    </div>
+</div>
